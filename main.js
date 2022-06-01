@@ -8,6 +8,7 @@ fName.addEventListener('click', () => {
     createName();
 });
 
+
 function createName() {
     const notif = document.createElement('div');
     notif.classList.add('name');
