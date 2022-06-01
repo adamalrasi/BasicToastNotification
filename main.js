@@ -23,8 +23,8 @@ function createName() {
     }, 700);
 }
 
-btn.addEventListener('click', () => {
-    createNotification();
+btn.addEventListener('keypress', (event) => {
+    createNotification(event);
 });
 
 function createNotification() {
@@ -40,3 +40,18 @@ function createNotification() {
 
     }, 700);
 }
+
+
+window.addEventListener('keypress', (event) => {
+    const notif = document.createElement('div');
+    notif.classList.add('toast');
+
+    notif.innerText = 'Lets go'
+
+    container.appendChild(notif);
+
+    setTimeout(() => {
+        notif.remove();
+
+    }, 700);
+})
